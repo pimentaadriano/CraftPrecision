@@ -1,0 +1,6 @@
+{
+  "name": "Craft Precision — Millwork & Joinery Operations",
+  "description": "Industrial woodworking production control, lumber inventory, CNC station allocation, and omnichannel marketplace fulfillment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

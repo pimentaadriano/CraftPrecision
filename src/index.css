@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-timber-600: #6f4315;
+  --color-timber-500: #8b5a2b;
+  --color-timber-700: #5a3611;
+  --color-timber-100: #ffdcc1;
+  --color-timber-50: #fff6ee;
+
+  --color-graphite-900: #161a1f;
+  --color-graphite-850: #1e232a;
+  --color-graphite-800: #2c3440;
+  --color-graphite-700: #3f4754;
+  --color-graphite-500: #575f6c;
+  --color-graphite-200: #dee2ec;
+  --color-graphite-100: #eaeef8;
+  --color-graphite-50: #f8f9ff;
+
+  --color-foliage-700: #005b14;
+  --color-foliage-600: #2e7d32;
+  --color-foliage-100: #e8f5e9;
+
+  --color-copper-600: #d97706;
+  --color-copper-100: #fef3c7;
+
+  --color-terracotta-600: #dc2626;
+  --color-terracotta-700: #ba1a1a;
+  --color-terracotta-100: #ffdad6;
+
+  --color-petroleum-700: #1d4e89;
+  --color-petroleum-100: #e6effa;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  body {
+    @apply bg-[#F4F5F7] text-[#171C23] dark:bg-[#161A1F] dark:text-[#EDF1FB];
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom thin architectural scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(87, 95, 108, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 90, 43, 0.5);
+}
